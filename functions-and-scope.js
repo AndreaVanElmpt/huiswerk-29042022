@@ -14,6 +14,24 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan bijhouden?
 // Log het antwoord in de terminal.
 
+// STAPPENPLAN
+// 1. aanmaken placeholder voor cijfer [amountCumLaude]
+// 2. loop door de grades array en check op 8 of hoger
+// 3. Als er 8 of hoger staat zet dan het cijfer in [amountCumLaude]
+// 4. Nieuwe waarde [amountCumLader] + 1
+// 5. log totaal in de terminal
+
+
+let amountCumLaude = 0;
+
+    for (let i = 0; i <= grades.length; i++) {
+
+        if (grades[i] >= 8) {
+            amountCumLaude++
+        }
+    }
+        console.log(amountCumLaude)
+
 // ---- Verwachte uitkomst: 6
 
 
@@ -21,6 +39,35 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // Schrijf een functie genaamd cumLaude, die een array van cijfers verwacht (zoals grades) en het aantal Cum laude studenten teruggeeft. Gebruik hiervoor jouw antwoord van 1a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array met eindcijfers willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
+
+//STAPPENPLAN
+// 1. maak een function [cumLaude]
+// 2. Definieer variable [listToCheck] die ook voor andere array gebruikt kan worden
+// 3. aanmaken placeholder voor cijfer [amountCumLaude]
+// 4. loop door de grades array en check op 8 of hoger
+// 5. Als er 8 of hoger staat zet dan het cijfer in [amountCumLaude]
+// 6. Nieuwe waarde [amountCumLader] + 1
+// 7. log totaal in de terminal
+
+let testArray = [6, 4, 5]
+
+function cumLaude(array){
+
+let amountCumLaude = 0;
+
+    for (let i = 0; i <= array.length; i++) {
+
+        if (array[i] >= 8) {
+            amountCumLaude++
+        }
+    }
+       return amountCumLaude
+
+
+}
+console.log ('Test array ' + cumLaude(testArray))
+console.log(cumLaude(grades))
+console.log(cumLaude(8, 9, 4, 6, 10))
 
 // ---- Verwachte uitkomsten:
 // cumLaude(grades) geeft 6
